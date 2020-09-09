@@ -57,45 +57,27 @@ $ npm i nodemailer
 
 Deploy (you can use "--debug" parameter to see what is happening under the hood):
 
- ```bash
+```bash
  $ sls deploy
 
-serverless ⚡ framework
+ serverless ⚡ framework
 
+ personal-reminder:
+   functionName:  personal-reminder
+   description:   trigger scf function based on timer
+   namespace:     default
+   runtime:       Nodejs8.9
+   handler:       index.main_handler
+   memorySize:    128
+   lastVersion:   $LATEST
+   traffic:       1
+   triggers:
+     timer:
+       - test-timer
+   vendorMessage: null
 
-Action: "deploy" - Stage: "dev" - App: "personal-reminder" - Instance: "personal-reminder"
-
-
-**functionName:** personal-reminder
-
-**description:** trigger scf function based on timer
-
-**namespace:** default
-
-**runtime:** Nodejs8.9
-
-**handler:** index.main_handler
-
-**memorySize:** 128
-
-**lastVersion:** $LATEST
-
-**traffic:** 1
-
-**triggers:**
-
-	**timer:**
-
-		- test-timer
-
-
-
-Full details: https://serverless.cloud.tencent.com/apps/personal-reminder/personal-reminder/dev
-
-
-
-26s › personal-reminder › Success
- ```
+ 23s › scf-timer › Success
+```
 
 Remove:
 
@@ -103,7 +85,6 @@ Remove:
 $ sls remove
 
 serverless ⚡ framework
-Action: "remove" - Stage: "dev" - App: "meeting_bot" - Instance: "meeting_bot"
 
 11s › personal-reminder › Success
 ```
