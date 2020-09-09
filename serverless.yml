@@ -1,0 +1,16 @@
+name: personal-reminder
+author: Jason Ah Chuen (Tencent Intern)
+org: Tencent
+description: Template for a personal email reminder, using a simple SCF function with a timer to automatically trigger the function at the specified time (cron job).
+keywords: tencent, serverless, scf
+repo: https://github.com/serverless-components/tencent-examples/tree/master/scf-timer
+readme: https://github.com/serverless-components/tencent-examples/tree/master/scf-timer/README.md
+license: MIT
+src:
+  src: ./
+  exclude:
+    - .env
+    - '.git/**'
+    - serverless.yml
+    - '**/node_modules'
+    - '**/package-lock.json'
